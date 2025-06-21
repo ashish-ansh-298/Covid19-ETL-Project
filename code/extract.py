@@ -11,7 +11,7 @@ print(df.head())
 # Rename columns for clarity
 df.rename(
     columns={"Date": "date", "ConfirmedIndianNational": "confirmed_indian"},
-    inplace=True,
+    inplace=True
 )
 
 # Convert date column to datetime
