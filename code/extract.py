@@ -2,7 +2,7 @@ import pandas as pd
 
 # EXTRACT
 # Load the CSV
-df = pd.read_csv(r"C:\Users\ashis\OneDrive\Desktop\archive\dataset\covid_19_india.csv")
+df = pd.read_csv(r"dataset\covid_19_india.csv")
 
 # Show first 5 rows
 print(df.head())
@@ -11,7 +11,7 @@ print(df.head())
 # Rename columns for clarity
 df.rename(
     columns={"Date": "date", "ConfirmedIndianNational": "confirmed_indian"},
-    inplace=True
+    inplace=True,
 )
 
 # Convert date column to datetime
@@ -25,7 +25,5 @@ print(df.info())
 
 # LOAD
 # Save the cleaned file
-output_path = (
-    r"C:\Users\ashis\OneDrive\Desktop\archive\cleaned_data\cleaned_covid_data.csv"
-)
+output_path = r"cleaned_data\cleaned_covid_data.csv"
 df.to_csv(output_path, index=False)
